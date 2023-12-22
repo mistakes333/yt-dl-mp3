@@ -3,7 +3,7 @@
 
 import axios from "axios";
 import { useRef, useState } from "react";
-import { youtube_parser } from "react-yt-utils";
+import { youtube_parser } from "@mistakes/yt-utils";
 import './globals.css';
 
 
