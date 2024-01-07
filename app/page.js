@@ -10,19 +10,20 @@ export default function Home() {
     e.preventDefault();
     const youtubeID = youtube_parser(inputUrlRef.current.value);
     const options = {
-      method: "get",
-      url: "https://youtube-mp36.p.rapidapi.com/dl",
-      headers: {
-        "X-RapidAPI-Key": "0649dc83c2msh88ac949854b30c2p1f2fe8jsn871589450eb3" || "84ee3485d6msh33016273685d45ap1177f5jsnf739c4da8f29",
-        "X-RapidAPI-Host": "youtube-mp36.p.rapidapi.com",
-      },
-      params: {
-        id: youtubeID,
-      },
-    };
-    axios(options)
-      .then((res) => setUrlResult(res.data.link))
-      .catch((err) => console.log(err));
+    const url = `https://youtube-mp36.p.rapidapi.com/dl?id=${youtubeID}`;
+    try {
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": apiKey,
+          "X-RapidAPI-Host": "youtube-mp36.p.rapidapi.com",
+        },
+      });
+      const data = await response.json();
+      setUrlResult(data.link);
+    } catch (err) {
+      console.log(err);
+    }
     inputUrlRef.current.value = "";
   };
   return (
