@@ -1,13 +1,11 @@
 "use client";
-
-
-import axios from "axios";
+import axios from "https://esm.sh/axios@1.6.5";
 import { useRef, useState } from "react";
-import { youtube_parser } from "@mistakes/yt-utils";
+import { youtube_parser } from "https://esm.sh/gh/mistakes333/utils@f58142943e";
 import './globals.css';
 
 
-export default function Page() {
+export default function Home() {
   const inputUrlRef = useRef();
   const [urlResult, setUrlResult] = useState(null);
 
@@ -32,7 +30,7 @@ export default function Page() {
 
     inputUrlRef.current.value = "";
   };
-        
+
   return (
         <div className="app">
       <section className="content">
@@ -68,4 +66,4 @@ export default function Page() {
       </section>
       </div>
  )
-    }
+}
