@@ -30,16 +30,39 @@ export default function Home() {
     } catch (err) {
       console.error(err);
     }
-
-    inputUrlRef.current.value = "";
+        inputUrlRef.current.value = "";
   };
-
   return (
-    <div className="app">
+        <div className="app">
       <section className="content">
-        {/* ... your existing JSX */}
+        <h1 className="content_title">YouTube to MP3 Converter</h1>
+        <p className="content_description">
+          Transform YouTube videos into MP3s in just a few clicks!
+        </p>
+        <form onSubmit={handleSubmit} className="form">
+          <input
+            ref={inputUrlRef}
+            placeholder="Paste a Youtube video URL link..."
+            className="form_input"
+            type="text"
+          />
+          <button type="submit" className="form_button">
+            Search
+          </button>
+        </form>
+        {urlResult ? (
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={urlResult}
+            className="download_btn"
+          >
+            Download MP3
+          </a>
+        ) : (
+          ""
+        )}
       </section>
-    </div>
-  );
-          }
-        
+      </div>
+ )
+    }
