@@ -6,20 +6,6 @@ import './globals.css';
 export default function Home() {
   const inputUrlRef = useRef();
   const [urlResult, setUrlResult] = useState(null);
-  const rapidApiKeys = [
-    "84ee3485d6msh33016273685d45ap1177f5jsnf739c4da8f29",
-    "0649dc83c2msh88ac949854b30c2p1f2fe8jsn871589450eb3",
-    "db751b0a05msh95365b14dcde368p12dbd9jsn440b1b8ae7cb",
-    // Add more keys as needed
-  ];
-
-  let currentApiKeyIndex = 0;
-
-  const getNextApiKey = () => {
-    const apiKey = rapidApiKeys[currentApiKeyIndex];
-    currentApiKeyIndex = (currentApiKeyIndex + 1) % rapidApiKeys.length;
-    return apiKey;
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
     const youtubeID = youtube_parser(inputUrlRef.current.value);
@@ -27,7 +13,7 @@ export default function Home() {
       method: "get",
       url: "https://youtube-mp36.p.rapidapi.com/dl",
       headers: {
-        "X-RapidAPI-Key": getNextApiKey(),
+        "X-RapidAPI-Key": "0649dc83c2msh88ac949854b30c2p1f2fe8jsn871589450eb3","84ee3485d6msh33016273685d45ap1177f5jsnf739c4da8f29","db751b0a05msh95365b14dcde368p12dbd9jsn440b1b8ae7cb",
         "X-RapidAPI-Host": "youtube-mp36.p.rapidapi.com",
       },
       params: {
