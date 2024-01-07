@@ -1,6 +1,5 @@
 "use client";
 import axios from "axios";
-import fetch from "node-fetch";
 import { useRef, useState } from "react";
 import { youtube_parser } from "@mt333/utils";
 import './globals.css';
