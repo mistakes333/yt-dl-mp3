@@ -3,9 +3,12 @@ import axios from "axios";
 import { useRef, useState } from "react";
 import { youtube_parser } from "@mt333/utils";
 import './globals.css';
+
 export default function Home() {
   const inputUrlRef = useRef();
   const [urlResult, setUrlResult] = useState(null);
+  const [backgroundImage, setBackgroundImage] = useState('MistakesOfficials_a_sky_full_of_stars_unreal_render_f66cbbc0-aa48-4c7a-bd64-4d84317ea5c7.png');
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const youtubeID = youtube_parser(inputUrlRef.current.value);
@@ -25,8 +28,9 @@ export default function Home() {
       .catch((err) => console.log(err));
     inputUrlRef.current.value = "";
   };
+
   return (
-        <div className="app">
+    <div className="app">
       <section className="content">
         <h1 className="content_title">YouTube to MP3 Converter</h1>
         <p className="content_description">
@@ -38,6 +42,12 @@ export default function Home() {
             placeholder="Paste a Youtube video URL link..."
             className="form_input"
             type="text"
+          />
+          <input
+            type="text"
+            placeholder="Enter background image URL"
+            onChange={(e) => setBackgroundImage(e.target.value)}
+            className="form_input"
           />
           <button type="submit" className="form_button">
             Search
@@ -56,6 +66,6 @@ export default function Home() {
           ""
         )}
       </section>
-      </div>
- )
+    </div>
+  );
 }
