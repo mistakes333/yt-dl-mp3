@@ -3,16 +3,12 @@ import axios from "axios";
 import { useRef, useState } from "react";
 import { youtube_parser } from "@mt333/utils";
 import './globals.css';
-
-
 export default function Home() {
   const inputUrlRef = useRef();
   const [urlResult, setUrlResult] = useState(null);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const youtubeID = youtube_parser(inputUrlRef.current.value);
-
     const options = {
       method: "get",
       url: "https://youtube-mp36.p.rapidapi.com/dl",
@@ -27,10 +23,8 @@ export default function Home() {
     axios(options)
       .then((res) => setUrlResult(res.data.link))
       .catch((err) => console.log(err));
-
     inputUrlRef.current.value = "";
   };
-
   return (
         <div className="app">
       <section className="content">
@@ -38,7 +32,6 @@ export default function Home() {
         <p className="content_description">
           Transform YouTube videos into MP3s in just a few clicks!
         </p>
-
         <form onSubmit={handleSubmit} className="form">
           <input
             ref={inputUrlRef}
@@ -50,7 +43,6 @@ export default function Home() {
             Search
           </button>
         </form>
-
         {urlResult ? (
           <a
             target="_blank"
