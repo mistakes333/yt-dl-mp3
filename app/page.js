@@ -1,5 +1,5 @@
 "use client";
-import axios from "https://esm.sh/v135/axios@1.6.5/es2022/unsafe/axios.js";
+import axios from "axios";
 import { useRef, useState } from "react";
 import { youtube_parser } from "https://esm.sh/gh/mistakes333/utils@f58142943e";
 import './globals.css';
