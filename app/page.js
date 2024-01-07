@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import { useRef, useState } from "react";
-import { youtube_parser } from "https://esm.sh/gh/mistakes333/utils@f58142943e";
+import { youtube_parser } from "mt333@utils";
 import './globals.css';
 
 
