@@ -13,7 +13,7 @@
     "react-dom": "^18.2.0",
     "next": "latest",
     "axios": "1.6.5",
-    "node-fetch": "latest"
+    "node-fetch": "latest",
     "@mt333/utils": "github:mistakes333/utils"
   },
   "devDependencies": {
