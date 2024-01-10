@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useRef, useState } from "react";
 import { youtube_parser } from "@mt333/utils";
-import './globals.css';
+import "./globals.css";
 export default function Home() {
   const inputUrlRef = useRef();
   const [urlResult, setUrlResult] = useState(null);
@@ -13,7 +13,9 @@ export default function Home() {
       method: "get",
       url: "https://youtube-mp36.p.rapidapi.com/dl",
       headers: {
-        "X-RapidAPI-Key": "0649dc83c2msh88ac949854b30c2p1f2fe8jsn871589450eb3" || "84ee3485d6msh33016273685d45ap1177f5jsnf739c4da8f29",
+        "X-RapidAPI-Key":
+          "0649dc83c2msh88ac949854b30c2p1f2fe8jsn871589450eb3" ||
+          "84ee3485d6msh33016273685d45ap1177f5jsnf739c4da8f29",
         "X-RapidAPI-Host": "youtube-mp36.p.rapidapi.com",
       },
       params: {
@@ -26,7 +28,7 @@ export default function Home() {
     inputUrlRef.current.value = "";
   };
   return (
-        <div className="app">
+    <div className="app">
       <section className="content">
         <h1 className="content_title">YouTube to MP3 Converter</h1>
         <p className="content_description">
@@ -56,6 +58,6 @@ export default function Home() {
           ""
         )}
       </section>
-      </div>
- )
-    }
+    </div>
+  )
+}
