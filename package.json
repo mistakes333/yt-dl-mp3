@@ -9,12 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "next": "latest",
+    "@mt333/utils": "github:mistakes333/utils",
     "axios": "1.6.5",
-    "node-fetch": "latest",
-    "@mt333/utils": "github:mistakes333/utils"
+    "next": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "eslint": "latest",
