@@ -14,8 +14,7 @@ export default function Home() {
       url: "https://youtube-mp36.p.rapidapi.com/dl",
       headers: {
         "X-RapidAPI-Key":
-          "0649dc83c2msh88ac949854b30c2p1f2fe8jsn871589450eb3" ||
-          "84ee3485d6msh33016273685d45ap1177f5jsnf739c4da8f29",
+          "0649dc83c2msh88ac949854b30c2p1f2fe8jsn871589450eb3",
         "X-RapidAPI-Host": "youtube-mp36.p.rapidapi.com",
       },
       params: {
