@@ -11,7 +11,8 @@
   "dependencies": {
     "axios": "^1.7.2",
     "next": "^15.0.0-rc.0",
-    "react": "^19.0.0-rc-df783f9ea1-20240708",
-    "react-dom": "^19.0.0-rc-df783f9ea1-20240708"
+    "react": "rc",
+    "react-dom": "rc",
+    "@mt333/utils": "github:mistakes333/utils"
   }
 }
