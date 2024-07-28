@@ -13,6 +13,7 @@
     "next": "^15.0.0-rc.0",
     "react": "rc",
     "react-dom": "rc",
-    "@mt333/utils": "github:mistakes333/utils"
+    "@mt333/utils": "github:mistakes333/utils",
+    "babel-plugin-react-compiler": "latest"
   }
 }
