@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import { useRef, useState } from "react";
-import { youtube_parser } from "./yt";
+import { youtube_parser } from "./yt.js";
 import "./globals.css";
 export default function Home() {
   const inputUrlRef = useRef();
