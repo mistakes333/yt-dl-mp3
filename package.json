@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mt333/utils": "github:mistakes333/utils",
     "axios": "^1.7.2",
     "next": "^15.0.0-rc.0",
     "react": "^19.0.0-rc-df783f9ea1-20240708",
